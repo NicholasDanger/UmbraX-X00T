@@ -2289,6 +2289,7 @@ static int path_lookupat(struct nameidata *nd, unsigned flags, struct path *path
 	if (!err && nd->flags & LOOKUP_DIRECTORY)
 		if (!d_can_lookup(nd->path.dentry))
 			err = -ENOTDIR;
+
 	if (!err) {
 		*path = nd->path;
 		nd->path.mnt = NULL;
