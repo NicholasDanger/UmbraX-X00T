@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Overdose XVI - Love You 3000 Times
+kernel.string=Overdose XVII - Love You 3000 Times
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
@@ -14,7 +14,7 @@ device.name2=X00TD
 device.name3=X00T
 device.name4=ASUS_X00T
 device.name5=ASUS_X00TDA
-supported.versions=8.1 - 9.0
+supported.versions=8.1 - 10.0
 '; } # end properties
 
 # shell variables
