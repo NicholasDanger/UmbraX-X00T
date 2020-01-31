@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Overdose XIX.4 - Love You 3000 Times
+kernel.string=Overdose XIX.6 - Love You 3000 Times
 do.devicecheck=1
 do.modules=0
 do.cleanup=1
