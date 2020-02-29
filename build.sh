@@ -17,6 +17,6 @@
 	echo "Compile Done"
 	echo ""
 	cd $KERNELDIR/built
-	zip -r Xenium-R1-Release-X00T-`date +%Y%m%d_%H%M`.zip * -x "kernel_output.txt" "*.zip"
+	zip -r Xenium-R2-Release-X00T-`date +%Y%m%d_%H%M`.zip * -x "kernel_output.txt" "*.zip"
 	cd $KERNELDIR/
 	echo "Zip Done"
