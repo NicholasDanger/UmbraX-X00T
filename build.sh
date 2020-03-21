@@ -7,11 +7,11 @@
 	export KERNELDIR=`readlink -f .`
 	rm $KERNELDIR/built/Image.gz-dtb
 	rm $KERNELDIR/built/kernel_output.txt
-	export CROSS_COMPILE=$MAIN/aarch64-elf-gcc/bin/aarch64-elf-  
-	export CROSS_COMPILE_ARM32=$MAIN/arm-eabi-gcc/bin/arm-eabi- 
-	export ARCH=arm64 && export SUBARCH=arm64
-	make X00T_defconfig
-	make -j$(nproc --all) | tee $KERNELDIR/built/kernel_output.txt
+	make ARCH=arm64 X00T_defconfig
+	make -j$(nproc --all) ARCH=arm64 \
+                      CC="$MAIN/proton-clang/bin/clang" \
+                      CROSS_COMPILE="$MAIN/proton-clang/bin/aarch64-linux-gnu-" \
+                      CROSS_COMPILE_ARM32="$MAIN/proton-clang/bin/arm-linux-gnueabi-"
 	mv $KERNELDIR/arch/arm64/boot/Image.gz-dtb $KERNELDIR/built/Image.gz-dtb
 	echo ""
 	echo "Compile Done"
